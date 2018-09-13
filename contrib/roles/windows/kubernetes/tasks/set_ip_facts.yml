@@ -6,7 +6,7 @@
 
 - name: IP facts | set internal IP
   set_fact:
-    host_internal_ip: "{{ ansible_ip_addresses[0] }}"
+    host_internal_ip: "{{ ansible_ip_addresses[1] }}"
 
 # TODO: enable this for future GCE support in the playbooks
 # - name: IP facts | set public IP
@@ -16,15 +16,15 @@
 
 - name: IP facts | set public IP
   set_fact:
-    host_public_ip: "{{ ansible_ip_addresses[0] }}"
+    host_public_ip: "{{ ansible_ip_addresses[1] }}"
   # when: not GCE
 
 - name: IP facts | set interface details
   set_fact:
-    interface_description: "{{ ansible_interfaces[0].interface_name }}"
-    interface_mac_addr: "{{ ansible_interfaces[0].macaddress }}"
-    interface_default_gateway: "{{ ansible_interfaces[0].default_gateway }}"
-    interface_index: "{{ ansible_interfaces[0].interface_index }}"
+    interface_description: "{{ ansible_interfaces[1].interface_name }}"
+    interface_mac_addr: "{{ ansible_interfaces[1].macaddress }}"
+    interface_default_gateway: "{{ ansible_interfaces[1].default_gateway }}"
+    interface_index: "{{ ansible_interfaces[1].interface_index }}"
 
 # Do not mark those as changed when executing the command
 - name: IP facts | Get Windows Prefix Length of {{interface_description}}
