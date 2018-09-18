@@ -1,6 +1,6 @@
 # username and password of the nodes (if the nodes have different passwords, please look into host_vars folder)
-ansible_user: Administrator
-ansible_password: Passw0rd
+ansible_user: atuvenie
+ansible_password: Passw0rdAdmin
 # This is the default port for HTTPS used by winrm
 ansible_port: 5986
 ansible_connection: winrm

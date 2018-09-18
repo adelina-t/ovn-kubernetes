@@ -1,4 +1,4 @@
-ansible_ssh_user: ubuntu
+ansible_ssh_user: atuvenie
 docker_bin_dir: /usr/bin
 
 # this will be the master node

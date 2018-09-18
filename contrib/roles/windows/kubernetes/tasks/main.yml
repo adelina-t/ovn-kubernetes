@@ -12,6 +12,7 @@
   include_tasks: set_ip_facts.yml
   tags:
     - facts
+    - trial
 
 # We need to start kubelet in order to be able to retrieve the ovn_host_subnet from kubernetes
 # node annotations
