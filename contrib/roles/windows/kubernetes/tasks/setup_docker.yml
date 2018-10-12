@@ -11,6 +11,13 @@
       { "bridge" : "none" }
     newline: unix
 
+
+# Set ip facts again, should fix wrong interface selection on 1803 images
+- name: Kubernetes | fetch network details
+  include_tasks: set_ip_facts.yml
+  tags:
+    - facts
+
 # Launch and do not wait for result, connection will drop
 - name: Docker network setup | Create transparent network
   win_shell: |
