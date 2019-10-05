@@ -6,6 +6,8 @@ ansible_port: 5986
 ansible_connection: winrm
 # The following is necessary for Python 2.7.9+ (or any older Python that has backported SSLContext, eg, Python 2.7.5 on RHEL7) when using default WinRM self-signed certificates:
 ansible_winrm_server_cert_validation: ignore
+ansible_winrm_read_timeout_sec: 3600
+
 
 master: false
 minion: true
@@ -20,3 +22,4 @@ service_wrapper_link: https://github.com/cloudbase/OpenStackService/releases/dow
 windows1709: 10.0.16299.0
 windows1803: 10.0.17134.0
 windows2019: 10.0.17763.0
+windows1903: 10.0.18362.0

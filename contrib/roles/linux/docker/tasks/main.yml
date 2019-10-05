@@ -30,6 +30,7 @@
     pkg: "{{item.name}}"
     force: "{{item.force|default(omit)}}"
     state: present
+    update_cache: yes
   register: docker_task_result
   until: docker_task_result|succeeded
   retries: 3
